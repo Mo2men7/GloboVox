@@ -23,13 +23,11 @@ function VoiceRecording({ setPlainText }) {
   }
 
   return (
-    <div>
-      <BiSolidMicrophone
-        size={22}
-        className="text-gray-400"
-        onClick={handleVoiceRecording}
-      />
-    </div>
+    <BiSolidMicrophone
+      size={22}
+      className="text-gray-400"
+      onClick={handleVoiceRecording}
+    />
   );
 }
 

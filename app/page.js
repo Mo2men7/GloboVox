@@ -3,9 +3,11 @@
 import { useState } from "react";
 import TextArea from "./_components/TextArea";
 import VoiceRecording from "./_components/VoiceRecording";
+import VoiceSpeaking from "./_components/VoiceSpeaking";
 
 export default function Home() {
   const [plainText, setPlainText] = useState("");
+
   return (
     <div className="h-[50rem] w-full dark:bg-black bg-white  dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative flex items-center justify-center">
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
@@ -37,6 +39,7 @@ export default function Home() {
                   <div className="flex flex-row justify-between w-full">
                     <span className="cursor-pointer flex flex-row space-x-2">
                       <VoiceRecording setPlainText={setPlainText} />
+                      <VoiceSpeaking plainText={plainText} />
                     </span>
                   </div>
                 </div>
