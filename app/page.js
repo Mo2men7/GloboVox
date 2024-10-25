@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import TextArea from "./_components/TextArea";
+import VoiceRecording from "./_components/VoiceRecording";
 
 export default function Home() {
   const [plainText, setPlainText] = useState("");
@@ -34,7 +35,9 @@ export default function Home() {
                     placeholder="I have a watermelon that all eyes on it..."
                   />
                   <div className="flex flex-row justify-between w-full">
-                    <span className="cursor-pointer flex flex-row space-x-2"></span>
+                    <span className="cursor-pointer flex flex-row space-x-2">
+                      <VoiceRecording setPlainText={setPlainText} />
+                    </span>
                   </div>
                 </div>
               </div>
